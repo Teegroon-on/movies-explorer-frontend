@@ -22,6 +22,10 @@
   display: none;
 }
 
+.burger-menu-button_place_main{
+  background-image: url('../../images/navigation-open-burger-button-white.svg');
+}
+
 @media screen and (max-width: 768px) {
   .burger-menu-button {
     display: block;

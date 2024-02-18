@@ -2,9 +2,10 @@
   font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
-  gap: 40px;
 }
 
 .logged-in-menu_place_movies {
@@ -14,6 +15,8 @@
 
 .logged-in-menu__list {
   display: flex;
+  justify-content: center;
+  width: 100%;
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -41,6 +44,7 @@
 
 .logged-in-menu__link_place_main {
   font-size: 14px;
+  color: white;
 }
 
 .logged-in-menu__link_active {

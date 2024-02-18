@@ -117,7 +117,7 @@ function App() {
             path='/movies'
             element={
               <Movies
-                moviesCards={initialMovies.slice(0, 12)}
+                moviesCards={initialMovies.slice(0, 16)}
                 isMovieSaved={isMovieSaved}
                 onSaveMovie={handleSaveMovie}
                 isLoading={isLoading}
@@ -126,7 +126,7 @@ function App() {
           ></Route>
           <Route
             path='/saved-movies'
-            element={<SavedMovies moviesCards={initialMovies.slice(0, 3)} isLoading={isLoading} />}
+            element={<SavedMovies moviesCards={initialMovies.slice(0, 16)} isLoading={isLoading} />}
           ></Route>
           <Route
             path='/profile'

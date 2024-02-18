@@ -7,7 +7,7 @@ function BurgerMenuButton({ onBurgerMenuOpen, isLoggedIn }) {
 
   return (
     <button
-      className={`burger-menu-button ${mainPath && !isLoggedIn && 'burger-menu-button_is_hidden'}`}
+      className={`burger-menu-button ${mainPath && !isLoggedIn && 'burger-menu-button_is_hidden'} ${mainPath && 'burger-menu-button_place_main'}`}
       onClick={onBurgerMenuOpen}
       type='button'
     ></button>

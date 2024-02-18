@@ -12,7 +12,7 @@ function Navigation({ isLoggedIn, onNavigateToSignup, onNavigateToSignin, onNavi
     <nav className={`navigation ${otherPaths ? 'navigation_place_movies' : ''}`}>
       {mainPath && (
         <ul className='navigation__links'>
-          <li>{isLoggedIn && <LoggedInMenu place='main' onNavigateToProfile={onNavigateToProfile} />}</li>
+          {isLoggedIn && <LoggedInMenu place='main' onNavigateToProfile={onNavigateToProfile} />}
           <li>
             {!isLoggedIn && (
               <MainMenu onNavigateToSignup={onNavigateToSignup} onNavigateToSignin={onNavigateToSignin} />

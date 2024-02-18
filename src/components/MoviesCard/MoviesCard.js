@@ -11,6 +11,9 @@ function MoviesCard({ movieCard, buttonType, isMovieSaved, onSaveMovie }) {
 
   return (
     <div className='moviescard'>
+      <a href={movieCard.trailerLink} target='_blank' rel='noreferrer'>
+        <img className='moviescard__image' src={imageUrl} alt={movieCard.nameRU} />
+      </a>
       <h2 className='moviescard__title'>{movieCard.nameRU}</h2>
       <p className='moviescard__duration'>{getDurationFromMins(movieCard.duration)}</p>
       <button
@@ -19,9 +22,6 @@ function MoviesCard({ movieCard, buttonType, isMovieSaved, onSaveMovie }) {
         type='button'
         onClick={onSaveMovie}
       ></button>
-      <a href={movieCard.trailerLink} target='_blank' rel='noreferrer'>
-        <img className='moviescard__image' src={imageUrl} alt={movieCard.nameRU} />
-      </a>
     </div>
   );
 }
