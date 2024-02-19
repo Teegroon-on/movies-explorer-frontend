@@ -1,0 +1,136 @@
+.account {
+  font-family: 'Inter';
+}
+
+.account__wrapper {
+  width: 410px;
+  margin: 0 auto;
+  padding: 74px 0 70px;
+}
+
+.account__input-label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  margin: 0;
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid #e8e8e8;
+  display: block;
+}
+
+.account__input-label_type_e-mail {
+  padding-bottom: 0;
+  margin-top: 17px;
+  border-bottom: 1px solid #fff;
+}
+
+.account__input {
+  text-align: right;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  background: #fff;
+  border: none;
+  margin: 0;
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid #e8e8e8;
+  display: block;
+}
+
+.account__border-between-inputs {
+  border-top: 1px solid #e8e8e8;
+  grid-column: 1/3;
+}
+
+.account__error {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ff004c;
+  margin: 189px auto 0;
+  height: 13px;
+}
+
+.account__input_type_e-mail {
+  padding-bottom: 0;
+  margin-top: 17px;
+  border: none;
+}
+
+.account__input:focus {
+  outline: none;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.account__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 219px;
+}
+
+.account__button {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+  padding: 0;
+}
+
+.account__button:hover {
+  opacity: 0.7;
+}
+
+.account__button_type_logout {
+  color: #ee3465;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .account__wrapper {
+    padding: 236px 0 269px;
+  }
+
+  .account__buttons {
+    margin-top: 210px;
+  }
+
+  .account__button_type_logout {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .account__wrapper {
+    padding: 70px 0 40px;
+    box-sizing: border-box;
+    width: 260px;
+    height: calc(100vh - 74px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account__buttons {
+    margin-top: auto;
+  }
+
+  .account__button {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .account__button_type_logout {
+    margin: 0;
+  }
+}
