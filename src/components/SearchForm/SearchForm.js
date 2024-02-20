@@ -1,4 +1,6 @@
 import Checkbox from '../Checkbox/Checkbox';
+import IconGrey from '../../images/search-grey.svg';
+import IconWhite from '../../images/search-white.svg';
 import './SearchForm.css';
 
 function SearchForm() {
@@ -6,6 +8,7 @@ function SearchForm() {
     <section className='search-form'>
       <form className='search-form__form' name='search-form'>
         <div className='search-form__wrapper'>
+          <img src={IconGrey} alt='Иконка Поиска(серая)'/>
           <label className='search-form__label'>
             <input
               className='search-form__input'
@@ -18,10 +21,16 @@ function SearchForm() {
             />
           </label>
           <button className='search-form__submit-button' type='submit'>
-            Поиск
+          <img src={IconWhite} alt='Иконка Поиска(белая)'/>
           </button>
+          <div className='search-form__divider'></div>
+          <div className='search-form__checkbox-big'> 
+            <Checkbox />
+          </div>
         </div>
-        <Checkbox />
+        <div className='search-form__checkbox-small'> 
+            <Checkbox />
+        </div>
       </form>
     </section>
   );

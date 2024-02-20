@@ -9,9 +9,9 @@ function NavigationComponent({ isLoggedIn, onNavigateToSignup, onNavigateToSigni
   const mainPath = pathname === '/';
 
   return ( 
-    <nav className={`navigation ${otherPaths ? 'navigation_place_movies' : ''}`}>
+    <nav className={`navigation-component ${otherPaths ? 'navigation-component_place_movies' : ''}`}>
       {mainPath && (
-        <ul className='navigation__links'>
+        <ul className='navigation-component__links'>
           {isLoggedIn && <MenuLogged place='main' onNavigateToProfile={onNavigateToProfile} />}
           <li>
             {!isLoggedIn && (

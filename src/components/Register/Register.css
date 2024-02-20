@@ -25,7 +25,7 @@
 }
 
 .register__input:focus {
-  outline: 1px solid #465dff;
+  outline: 1px solid #DDDEE3;
 }
 
 .register__input::placeholder {

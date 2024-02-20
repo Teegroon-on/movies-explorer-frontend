@@ -16,9 +16,9 @@ function JobResume() {
             <span className='job-resume__arrow'>↗</span>
           </a>
         </li>
-        <li className='job-resume__work'>
+        <li className='job-resume__list-item'>
           <a
-            className='job-resume__work-link'
+            className='job-resume__list-item-link'
             href='https://teegroon-on.github.io/russian-travel/'
             target='_blank'
             rel='noreferrer'
@@ -27,9 +27,9 @@ function JobResume() {
             <span className='job-resume__arrow'>↗</span>
           </a>
         </li>
-        <li className='job-resume__work'>
+        <li className='job-resume__list-item'>
           <a
-            className='job-resume__work-link'
+            className='job-resume__list-item-link'
             href='https://teegroon-on.github.io/mesto/'
             target='_blank'
             rel='noreferrer'

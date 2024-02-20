@@ -1,7 +1,7 @@
 .promo__background {
-  background-color: #465dff;
+  background-color: #DDDEE3;
   padding: 0 0 60px;
-  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: 'Inter';
   height: 524px;
 }
 
@@ -24,7 +24,7 @@
   line-height: 58px;
   letter-spacing: -0.04em;
   text-align: center;
-  color: #ffffff;
+  color: #000;
   max-width: 800px;
 }
 

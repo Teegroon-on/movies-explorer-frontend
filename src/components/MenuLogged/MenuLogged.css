@@ -15,7 +15,7 @@
 
 .menu-logged__list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   gap: 20px;
   list-style: none;
@@ -44,7 +44,7 @@
 
 .menu-logged__link_place_main {
   font-size: 14px;
-  color: white;
+  justify-content: center;
 }
 
 .menu-logged__link_active {
