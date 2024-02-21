@@ -1,5 +1,5 @@
 .search-form {
-  font-family: 'Inter';
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
   z-index: -1;
   padding: 70px 70px 10px;
 }
