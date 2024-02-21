@@ -15,7 +15,7 @@ function Account({ user, isEdit, onSignOut, onSubmit, onEditProfile, isFormValid
           onSubmit={onSubmit}
           isFormValid={isFormValid}
         >
-          <label htmlFor='name' className='profile__input-label'>
+          <label htmlFor='name' className='account__input-label'>
             Имя
           </label>
           <input

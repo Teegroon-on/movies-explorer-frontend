@@ -112,6 +112,10 @@
 }
 
 @media screen and (max-width: 900px) {
+  .about__wrapper {
+    padding: 0 50px;
+  }
+
   .about__text {
     margin-bottom: 93px;
   }

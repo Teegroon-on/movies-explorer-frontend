@@ -1,10 +1,13 @@
 import './Promo.css';
+import promoImage from '../../images/header_decoration.svg';
+
 
 function Promo() {
   return (
     <section className='promo'>
       <div className='promo__background'>
         <div className='promo__content'>
+          <img className='promo__image' src={promoImage} alt='Изображение промо' />
           <h1 className='promo__title'>Учебный проект студента факультета Веб-разработки.</h1>
         </div>
       </div>

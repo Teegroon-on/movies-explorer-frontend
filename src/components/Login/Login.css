@@ -16,16 +16,16 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
-  background: #f9f9f9;
   color: #000000;
-  border-radius: 8px;
   border: none;
-  padding: 15px;
+  padding: 0 15px 10px 0;
   margin: 0;
+  border-bottom: 1px solid #E8E8E8;
 }
 
 .login__input:focus {
-  outline: 1px solid #DDDEE3;
+  outline: none;
+  border-bottom: 1px solid #3456F3;
 }
 
 .login__input::placeholder {

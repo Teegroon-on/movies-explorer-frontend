@@ -58,9 +58,9 @@
 
 @media screen and (max-width: 586px) {
   .checkbox {
-    margin: 30px 0 0;
+    margin: 46px 0 0;
     border-bottom: 1px solid rgba(170, 170, 170, 0.2);
-    padding-bottom: 63px;
+    padding-bottom: 45px;
   }
 
   .checkbox__invisible-checkbox + .checkbox__visible-checkbox {

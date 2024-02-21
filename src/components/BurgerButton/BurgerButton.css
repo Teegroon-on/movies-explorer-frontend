@@ -22,10 +22,6 @@
   display: none;
 }
 
-.burger-button_place_main{
-  background-image: url('../../images/burger-button-white.svg');
-}
-
 @media screen and (max-width: 768px) {
   .burger-button {
     display: block;
