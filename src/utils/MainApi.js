@@ -24,7 +24,8 @@ class MainApi {
   getUserInfo() {
     return this._request('/users/me', {
       method: 'GET',
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
       headers: this._headers,
     });
   }
@@ -32,7 +33,8 @@ class MainApi {
   editProfile(name, email) {
     return this._request('/users/me', {
       method: 'PATCH',
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
       headers: this._headers,
       body: JSON.stringify({
         name,
@@ -45,7 +47,8 @@ class MainApi {
     return this._request('/movies', {
       method: 'GET',
       headers: this._headers,
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
     });
   }
 
@@ -64,7 +67,8 @@ class MainApi {
   }) {
     return this._request('/movies', {
       method: 'POST',
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
       headers: this._headers,
       body: JSON.stringify({
         country,
@@ -85,7 +89,8 @@ class MainApi {
   deleteMovie(movieId) {
     return this._request(`/movies/${movieId}`, {
       method: 'DELETE',
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
       headers: this._headers,
     });
   }
@@ -101,7 +106,8 @@ class MainApi {
   authorize = (email, password) => {
     return this._request(`/signin`, {
       method: 'POST',
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
       headers: this._headers,
       body: JSON.stringify({ email, password }),
     });
@@ -110,7 +116,8 @@ class MainApi {
   signout = () => {
     return this._request(`/signout`, {
       method: 'GET',
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
       headers: this._headers,
     });
   };
@@ -118,7 +125,8 @@ class MainApi {
   getContent = () => {
     return this._request(`/users/me`, {
       method: 'GET',
-      credentials: this._credentials,
+      withCredentials: true,
+      //credentials: this._credentials,
       headers: this._headers,
     });
   };
