@@ -18,6 +18,7 @@ function Burger({ isOpen, onClose, onNavigateToProfile }) {
                   className={({ isActive }) =>
                     `burger__link ${isActive ? 'burger__link_active' : ''}`
                   }
+                  onClick={onClose}
                 >
                   Главная
                 </NavLink>
@@ -28,6 +29,7 @@ function Burger({ isOpen, onClose, onNavigateToProfile }) {
                   className={({ isActive }) =>
                     `burger__link ${isActive ? 'burger__link_active' : ''}`
                   }
+                  onClick={onClose}
                 >
                   Фильмы
                 </NavLink>
@@ -38,6 +40,7 @@ function Burger({ isOpen, onClose, onNavigateToProfile }) {
                   className={({ isActive }) =>
                     `burger__link ${isActive ? 'burger__link_active' : ''}`
                   }
+                  onClick={onClose}
                 >
                   Сохранённые фильмы
                 </NavLink>
@@ -45,7 +48,7 @@ function Burger({ isOpen, onClose, onNavigateToProfile }) {
             </ul>
           </li>
           <li className='burger__list-item'>
-            <AccountButton onNavigateToProfile={onNavigateToProfile} />
+            <AccountButton onNavigateToProfile={onNavigateToProfile} onCloseBurgerMenu={onClose}/>
           </li>
         </ul>
       </nav>

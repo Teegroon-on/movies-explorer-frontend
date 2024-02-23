@@ -1,7 +1,19 @@
 import './Register.css';
+import useForm from '../../customHooks/useForm';
 import LoginPage from '../LoginPage/LoginPage';
 
-const Register = ({ onSubmit, isFormValid }) => {
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { nameRegex } from '../../utils/constants/regexConstants';
+
+const Register = ({ name, onSignup, isRequestSuccessful, errorText, onCleanErrorText, isLoading, isLoggedIn }) => {
+  const { values, errors, formValid, onChange } = useForm();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    isLoggedIn && navigate('/movies', { replace: true });
+  });
   return (
     <main className='register'>
       <LoginPage
@@ -10,58 +22,72 @@ const Register = ({ onSubmit, isFormValid }) => {
         paragraphText='Уже'
         url='/signin'
         linkText='Войти'
-        name='register'
-        onSubmit={onSubmit}
-        isFormValid={isFormValid}
+        name={`${name}`}
+        onSubmit={onSignup}
+        isLoading={isLoading}
+        loadingText='Регистрация...'
+        values={values}
+        formValid={formValid}
+        isRequestSuccessful={isRequestSuccessful}
+        errorText={errorText}
+        onCleanErrorText={onCleanErrorText}
       >
         <label htmlFor='name' className='register__label'>
           Имя
         </label>
         <input
           type='text'
-          className='register__input'
+          className={`register__input ${errors.name && 'register__input_type_error'}`}
+          value={values.name || ''}
+          onChange={onChange}
+          form='form'
           name='name'
           id='name'
           placeholder='Имя'
           minLength='2'
           maxLength='30'
           autoComplete='off'
-          defaultValue='Виталий'
+          pattern={nameRegex}
+          disabled={isLoading}
           required
         />
-        <span className='register__error'></span>
+        <span className='register__error'>{errors.name}</span>
         <label htmlFor='email' className='register__label'>
           E-mail
         </label>
         <input
           type='email'
-          className='register__input'
+          className={`register__input ${errors.email && 'register__input_type_error'}`}
+          value={values.email || ''}
+          onChange={onChange}
           name='email'
           id='email'
           placeholder='E-mail'
-          minLength='6'
-          maxLength='30'
           autoComplete='off'
-          defaultValue='pochta@yandex.ru'
+          disabled={isLoading}
           required
         />
-        <span className='register__error'></span>
+        <span className='register__error'>{errors.email}</span>
         <label htmlFor='password' className='register__label'>
           Пароль
         </label>
         <input
           type='password'
-          className='register__input register__input_is_not-valid'
+          value={values.password || ''}
+          onChange={onChange}
+          className={`register__input ${errors.password && 'register__input_type_error'}`}
+          form='form'
           name='password'
           id='password'
           placeholder='Пароль'
-          minLength='6'
-          maxLength='30'
           autoComplete='off'
+          minLength='8'
+          maxLength='30'
+          disabled={isLoading}
           defaultValue='12345678987654'
           required
         />
-        <span className='register__error'>Что-то пошло не так...</span>
+        <span className='register__error'>{errors.password}</span>
       </LoginPage>
     </main>
   );

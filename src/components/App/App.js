@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback} from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
@@ -9,10 +9,14 @@ import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Footer from '../Footer/Footer';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import ProtectRouteElement from '../ProtectRoute/ProtectRoute';
+import Preloader from '../Preloader/Preloader';
+import ToolTip from '../ToolTip/ToolTip';
 import './App.css';
-
+import mainApi from '../../utils/MainApi';
 import moviesApi from '../../utils/MoviesApi';
-
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import { ZERO_CARDS, SHORT_MOVIE_DURATION } from '../../utils/constants/cardsConstants';
 function App() {
   const [initialMovies, setInitialMovies] = useState([]);
   const [isMovieSaved, setIsMovieSaved] = useState(false);

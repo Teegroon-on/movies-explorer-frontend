@@ -24,6 +24,17 @@
   width: 100%;
 }
 
+.search-form__error {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ee3465;
+  margin-top: 8px;
+  min-height: 12px;
+  display: block;
+}
+
 .search-form__label {
   width: 100%;
   display: flex;
