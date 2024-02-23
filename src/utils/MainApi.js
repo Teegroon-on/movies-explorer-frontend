@@ -25,7 +25,7 @@ class MainApi {
     return this._request('/users/me', {
       method: 'GET',
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
       headers: this._headers,
     });
   }
@@ -34,7 +34,7 @@ class MainApi {
     return this._request('/users/me', {
       method: 'PATCH',
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
       headers: this._headers,
       body: JSON.stringify({
         name,
@@ -48,7 +48,7 @@ class MainApi {
       method: 'GET',
       headers: this._headers,
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
     });
   }
 
@@ -68,7 +68,7 @@ class MainApi {
     return this._request('/movies', {
       method: 'POST',
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
       headers: this._headers,
       body: JSON.stringify({
         country,
@@ -90,7 +90,7 @@ class MainApi {
     return this._request(`/movies/${movieId}`, {
       method: 'DELETE',
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
       headers: this._headers,
     });
   }
@@ -107,7 +107,7 @@ class MainApi {
     return this._request(`/signin`, {
       method: 'POST',
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
       headers: this._headers,
       body: JSON.stringify({ email, password }),
     });
@@ -117,7 +117,7 @@ class MainApi {
     return this._request(`/signout`, {
       method: 'GET',
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
       headers: this._headers,
     });
   };
@@ -126,7 +126,7 @@ class MainApi {
     return this._request(`/users/me`, {
       method: 'GET',
       withCredentials: true,
-      //credentials: this._credentials,
+      credentials: this._credentials,
       headers: this._headers,
     });
   };
