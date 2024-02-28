@@ -12,20 +12,20 @@ function Account({ isEdit, onSignOut, onSubmit, onEditProfile, isLoading }) {
   const [isOtherUserData, setIsOtherUserData] = useState(false);
 
   useEffect(() => {
-    resetValidation({ name: currentUser.name, email: currentUser.email }, {}, false);
+    resetValidation({ name: currentUser.data.name, email: currentUser.data.email }, {}, false);
   }, [currentUser, resetValidation]);
 
   useEffect(() => {
-    if (values.name !== currentUser.name || values.email !== currentUser.email) {
+    if (values.name !== currentUser.data.name || values.email !== currentUser.data.email) {
       setIsOtherUserData(true);
     } else {
       setIsOtherUserData(false);
     }
-  }, [values.name, values.email, currentUser.name, currentUser.email]);
+  }, [values.name, values.email, currentUser.data.name, currentUser.data.email]);
   return (
     <main className='account'>
       <section className='account__wrapper'>
-        <LoginTitle headerText={`Привет, ${currentUser.name}!`} place='account' />
+        <LoginTitle headerText={`Привет, ${currentUser.data.name}!`} place='account' />
         <FormComponent
           type='account'
           name='account'

@@ -18,7 +18,7 @@ function MoviesCardList({
   showMoreButton
 }) {
   const { pathname } = useLocation();
-
+  
   const movieCardElements = movies.map((movieCard) => (
     <li key={movieCard.id || movieCard._id}>
       <MoviesItem

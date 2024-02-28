@@ -84,7 +84,6 @@ const Register = ({ name, onSignup, isRequestSuccessful, errorText, onCleanError
           minLength='8'
           maxLength='30'
           disabled={isLoading}
-          defaultValue='12345678987654'
           required
         />
         <span className='register__error'>{errors.password}</span>

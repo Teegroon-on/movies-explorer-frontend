@@ -33,7 +33,7 @@ const Login = ({ name, onSignin, isRequestSuccessful, errorText, onCleanErrorTex
           E-mail
         </label>
         <input
-          ype='text'
+          type='text'
           className={`login__input ${errors.email && 'login__input_type_error'}`}
           value={values.email || ''}
           name='email'
@@ -44,7 +44,7 @@ const Login = ({ name, onSignin, isRequestSuccessful, errorText, onCleanErrorTex
           disabled={isLoading}
           required
         />
-        <span className='login__error'>errors.email</span>
+        <span className='login__error'>{errors.email}</span>
 
         <label htmlFor='password' className='login__input-label'>
           Пароль

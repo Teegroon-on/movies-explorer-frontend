@@ -31,6 +31,7 @@ function Movies({
   didTheUserSearch,
   isRequestSuccessful,
  }) {
+
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [moviesCards, setMoviesCards] = useState([]);
   const [moviesToShow, setMoviesToShow] = useState([]);

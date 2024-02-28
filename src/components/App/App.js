@@ -84,7 +84,7 @@ function App() {
       Promise.all([mainApi.getUserInfo(), mainApi.getSavedMovies()])
         .then(([userData, savedMovies]) => {
           setCurrentUser(userData);
-          setSavedMovies(savedMovies);
+          setSavedMovies(savedMovies.movies);
           localStorage.setItem('saved-movies', JSON.stringify(savedMovies));
           const userRequest = localStorage.getItem('userRequest');
           userRequest ? setDidTheUserSearch(true) : setDidTheUserSearch(false);

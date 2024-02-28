@@ -53,7 +53,7 @@ function SearchForm({ onSubmit, onFilter, isLoading, moviesRequest, isCheckBoxCh
           </button>
           <div className='search-form__divider'></div>
           <div className='search-form__checkbox-big'> 
-            <Checkbox />
+          <Checkbox checked={isCheckBoxChecked} onFilter={onFilter} isLoading={isLoading}/>
           </div>
         </div>
         <div className='search-form__checkbox-small'> 
